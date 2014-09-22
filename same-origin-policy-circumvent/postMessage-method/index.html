@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			window.onload = function(){
+				var iframe = document.querySelector('iframe').contentWindow;
+			
+					iframe.postMessage(
+						'New message',
+						'iframe.html' /* Local of iframe.html file */
+					);
+			};
+
+		</script>
+	</head>
+	<body>
+		<iframe src="iframe.html" width="600px" height="600px"></iframe>
+	</body>
+</html>

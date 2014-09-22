@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			window.onload = function(){
+				function onMessage( ev ){
+					document.querySelector('.message').innerHTML = ev.data;
+				};
+
+				window.addEventListener ? 
+					window.addEventListener( 'message', onMessage, false ) : 
+					window.attachEvent( 'onmessage', onMessage );
+			};
+		</script>
+	</head>
+
+	<body>
+		<div class="message"></div>
+	</body>
+</html>
